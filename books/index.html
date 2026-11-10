@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Books — Scott Chanatry</title>
-<meta name="description" content="Books by Scott Chanatry: Behold Your Mother and Nobody Sent Me, available on Amazon.">
+<meta name="description" content="Novels by Scott Chanatry: Behold Your Mother and Nobody Sent Me, books 1 and 2 of the Aspartame series, available on Amazon.">
 <link rel="canonical" href="https://scottchanatry.com/books/">
 <meta name="robots" content="index, follow">
 
@@ -30,11 +30,56 @@
   "@id": "https://scottchanatry.com/books/#page",
   "url": "https://scottchanatry.com/books/",
   "name": "Books — Scott Chanatry",
-  "author": { "@id": "https://scottchanatry.com/#scott" },
-  "isPartOf": { "@id": "https://scottchanatry.com/#site" },
+  "author": {
+    "@id": "https://scottchanatry.com/#scott"
+  },
+  "isPartOf": {
+    "@id": "https://scottchanatry.com/#site"
+  },
   "hasPart": [
-    { "@type": "Book", "name": "Behold Your Mother", "image": "https://scottchanatry.com/books/covers/behold-your-mother.jpg", "url": "https://www.amazon.com/dp/B0HQQQTRWR", "author": { "@id": "https://scottchanatry.com/#scott" } },
-    { "@type": "Book", "name": "Nobody Sent Me", "image": "https://scottchanatry.com/books/covers/nobody-sent-me.jpg", "url": "https://www.amazon.com/dp/B0HQS65DS2", "author": { "@id": "https://scottchanatry.com/#scott" } }
+    {
+      "@type": "Book",
+      "@id": "https://scottchanatry.com/books/#behold-your-mother",
+      "name": "Behold Your Mother",
+      "genre": "Fiction",
+      "position": 1,
+      "isPartOf": {
+        "@id": "https://scottchanatry.com/books/#aspartame"
+      },
+      "image": "https://scottchanatry.com/books/covers/behold-your-mother.jpg",
+      "url": "https://www.amazon.com/dp/B0HQQQTRWR",
+      "author": {
+        "@id": "https://scottchanatry.com/#scott"
+      },
+      "inLanguage": "en"
+    },
+    {
+      "@type": "Book",
+      "@id": "https://scottchanatry.com/books/#nobody-sent-me",
+      "name": "Nobody Sent Me",
+      "genre": "Fiction",
+      "position": 2,
+      "isPartOf": {
+        "@id": "https://scottchanatry.com/books/#aspartame"
+      },
+      "description": "The Point, 1998. Chris is thirteen, and his mother asks him the same four questions every weekday morning. By the summer he finishes school, she sleeps on a bench under the highway ramp. The second novel of the Aspartame series, after Behold Your Mother.",
+      "datePublished": "2026-11-07",
+      "numberOfPages": 251,
+      "inLanguage": "en",
+      "image": "https://scottchanatry.com/books/covers/nobody-sent-me.jpg",
+      "url": "https://www.amazon.com/dp/B0HQS65DS2",
+      "author": {
+        "@id": "https://scottchanatry.com/#scott"
+      }
+    },
+    {
+      "@type": "BookSeries",
+      "@id": "https://scottchanatry.com/books/#aspartame",
+      "name": "Aspartame",
+      "author": {
+        "@id": "https://scottchanatry.com/#scott"
+      }
+    }
   ]
 }
 </script>
@@ -52,30 +97,65 @@
 <header class="hero compact wrap">
   <p class="eyebrow">scottchanatry.com / books</p>
   <h1>Books</h1>
-  <p class="roles">Written in the margins of the longest rotation there is.</p>
+  <p class="roles">Novels, written in the margins of the longest rotation there is.</p>
 </header>
 
 <main id="main">
-  <section class="section wrap" aria-labelledby="books-h">
-    <h2 class="label" id="books-h">On Amazon</h2>
-    <ul class="books">
-      <li class="book">
-        <a href="https://www.amazon.com/dp/B0HQQQTRWR">
-          <img src="/books/covers/behold-your-mother.jpg" width="600" height="960"
-               alt="Cover of Behold Your Mother by Scott Chanatry" loading="lazy">
-          <span class="book-title">Behold Your Mother</span>
-          <span class="book-buy">On Amazon <span aria-hidden="true">&#8599;</span></span>
-        </a>
-      </li>
-      <li class="book">
-        <a href="https://www.amazon.com/dp/B0HQS65DS2">
-          <img src="/books/covers/nobody-sent-me.jpg" width="600" height="960"
-               alt="Cover of Nobody Sent Me by Scott Chanatry" loading="lazy">
-          <span class="book-title">Nobody Sent Me</span>
-          <span class="book-buy">On Amazon <span aria-hidden="true">&#8599;</span></span>
-        </a>
-      </li>
-    </ul>
+  <section class="section wrap" aria-labelledby="series-h">
+    <h2 class="label" id="series-h">The Aspartame series</h2>
+
+    <article class="book-detail" id="behold-your-mother" aria-labelledby="bym-title">
+      <a class="book-cover" href="https://www.amazon.com/dp/B0HQQQTRWR" tabindex="-1" aria-hidden="true">
+        <img src="/books/covers/behold-your-mother.jpg" width="600" height="960"
+             alt="" loading="lazy">
+      </a>
+      <div class="book-body">
+        <p class="book-series">Book 1</p>
+        <h3 class="book-name" id="bym-title">Behold Your Mother</h3>
+        <div class="book-desc">
+          <p>The first novel of the Aspartame series.</p>
+        </div>
+        <a class="book-amazon" href="https://www.amazon.com/dp/B0HQQQTRWR">Read more on Amazon <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
+
+    <article class="book-detail" id="nobody-sent-me" aria-labelledby="nsm-title">
+      <a class="book-cover" href="https://www.amazon.com/dp/B0HQS65DS2" tabindex="-1" aria-hidden="true">
+        <img src="/books/covers/nobody-sent-me.jpg" width="600" height="960"
+             alt="" loading="lazy">
+      </a>
+      <div class="book-body">
+        <p class="book-series">Book 2 &middot; 251 pages &middot; November 2026</p>
+        <h3 class="book-name" id="nsm-title">Nobody Sent Me</h3>
+        <div class="book-desc">
+          <p class="book-questions">Did you eat your lunch.<br>
+            Did you say your prayers.<br>
+            Did you wear an undershirt.<br>
+            Did anybody ask you anything.<br>
+            Is it all right?</p>
+          <p>The Point, 1998. Chris is thirteen, and every weekday at twenty to
+            seven his mother rings twice, showers at his grandmother&rsquo;s, and
+            asks him the same four questions. Then one more, looking at the window.
+            Someone always tells her that it is.</p>
+          <p>He is thinner by a summer of walking, and on his way up the hill to a
+            school his grandmother is paying for with a failing heart. His mother
+            counsels other people&rsquo;s children for the Board of Education. On
+            Saturdays she stands outside the church fence at Star of the Sea, at
+            the one bar worn down to bright iron, and prays through the five
+            o&rsquo;clock Mass without going in.</p>
+          <p>By the summer he finishes school, his mother sleeps sitting up on a
+            bench under the highway ramp and will not come in from the street. A
+            college across the country wants to know when he will arrive.</p>
+          <p>One night he sits on the next bench until dawn. When she wakes, she
+            asks who sent him.</p>
+          <p>&ldquo;Nobody sent me. I came.&rdquo;</p>
+          <p>The second novel of the Aspartame series, after
+            <a href="#behold-your-mother"><cite>Behold Your Mother</cite></a>.
+            It stands on its own.</p>
+        </div>
+        <a class="book-amazon" href="https://www.amazon.com/dp/B0HQS65DS2">Buy on Amazon <span aria-hidden="true">&#8599;</span></a>
+      </div>
+    </article>
   </section>
 </main>
 
