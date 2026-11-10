@@ -323,3 +323,47 @@ footer a { color: var(--ink); text-decoration-color: var(--crayon-blue); text-de
   color: var(--crayon-blue);
   transform: rotate(-3deg);
 }
+
+/* ---------- books ---------- */
+
+.books {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(8.5rem, 38vw, 12rem), 1fr));
+  gap: 2rem clamp(1rem, 4vw, 1.75rem);
+}
+
+.book a {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  text-decoration: none;
+}
+
+.book img {
+  width: 100%;
+  height: auto;
+  border-radius: .25rem;
+  box-shadow: 0 1px 2px rgba(30, 36, 48, .12), 0 8px 24px rgba(30, 36, 48, .12);
+  margin-bottom: .6rem;
+  transition: transform .2s ease;
+}
+
+.book a:hover img { transform: translateY(-3px) rotate(-.6deg); }
+
+.book-title {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.book-buy { font-family: var(--mono); font-size: .85rem; color: var(--crayon-blue); }
+
+.book a:hover .book-title { text-decoration: underline; text-decoration-color: var(--crayon-blue); text-decoration-thickness: 3px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .book a:hover img { transform: none; }
+}
