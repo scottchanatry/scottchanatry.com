@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Blog — Scott Chanatry</title>
+<meta name="description" content="A parenting blog by Scott Chanatry, coming soon. In the meantime, read his writing on Medium.">
+<link rel="canonical" href="https://scottchanatry.com/blog/">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Blog — Scott Chanatry">
+<meta property="og:description" content="A parenting blog, coming soon. Meanwhile, on Medium.">
+<meta property="og:url" content="https://scottchanatry.com/blog/">
+<meta property="og:site_name" content="Scott Chanatry">
+<meta name="twitter:card" content="summary">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Shantell+Sans:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
+
+<!-- Entity data for search engines. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": "https://scottchanatry.com/blog/#page",
+  "url": "https://scottchanatry.com/blog/",
+  "name": "Blog — Scott Chanatry",
+  "description": "A parenting blog by Scott Chanatry, coming soon. Meanwhile, his writing is on Medium.",
+  "author": { "@id": "https://scottchanatry.com/#scott" },
+  "isPartOf": { "@id": "https://scottchanatry.com/#site" }
+}
+</script>
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<nav class="tabs wrap" aria-label="Site">
+  <a href="/">Home</a>
+  <a href="/blog/" aria-current="page">Blog</a>
+  <a href="/books/">Books</a>
+</nav>
+
+<header class="hero compact wrap">
+  <p class="eyebrow">scottchanatry.com / blog</p>
+  <h1>The blog</h1>
+  <p class="roles">Notes on parenting, from the longest rotation there is.
+    <span class="soon">coming soon</span></p>
+</header>
+
+<main id="main">
+  <section class="section wrap" aria-labelledby="meanwhile-h">
+    <h2 class="label" id="meanwhile-h">Meanwhile</h2>
+    <p>The parenting blog is still being sharpened. Until it&rsquo;s ready, my
+       writing lives on Medium.</p>
+    <ul class="places">
+      <li class="place">
+        <a rel="me" href="https://scottchanatry.medium.com">
+          <span class="place-name">Medium</span>
+          <span class="place-desc">essays and posts</span>
+          <span class="place-arrow" aria-hidden="true">&#8599;</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap">
+  <p>Say hello: <a href="mailto:hello@scottchanatry.com">hello@scottchanatry.com</a></p>
+  <p>&copy; 2026 Scott Chanatry &middot; No frameworks, no trackers. Drawings stay
+     until you wipe them or leave.</p>
+</footer>
+
+<button id="crayonToggle" aria-pressed="false">
+  <span aria-hidden="true">&#128396;&#65039;</span> Crayon
+</button>
+
+<canvas id="scribble" hidden aria-label="Drawing surface. Draw anywhere with your finger or mouse. Press Escape or Done to finish."></canvas>
+
+<div id="crayonKit" hidden role="group" aria-label="Crayon colors and controls">
+  <button class="swatch swatch-blue" data-color="#2C55D4" aria-pressed="true" aria-label="Blue crayon"></button>
+  <button class="swatch swatch-red" data-color="#E4572E" aria-pressed="false" aria-label="Red crayon"></button>
+  <button class="swatch swatch-yellow" data-color="#F5B31E" aria-pressed="false" aria-label="Yellow crayon"></button>
+  <button class="kit-btn" id="wipe">Wipe</button>
+  <button class="kit-btn" id="done">Done</button>
+</div>
+
+<script src="/crayon.js"></script>
+</body>
+</html>

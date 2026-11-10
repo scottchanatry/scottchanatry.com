@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Scott Chanatry — Child Psychiatrist, Stanford Alum, Parent, Vibecoder</title>
-<meta name="description" content="Scott Chanatry is a child psychiatrist, Stanford alum, parent, and vibecoder. His corner of the internet: a short bio, links, and a working crayon.">
+<title>Scott Chanatry — Stanford Alum, Parent, Author, Vibecoder</title>
+<meta name="description" content="Scott Chanatry is a Stanford alum, parent, author, and vibecoder. His corner of the internet: a short bio, his books, a parenting blog on the way, and a working crayon.">
 <link rel="canonical" href="https://scottchanatry.com/">
 <meta name="robots" content="index, follow">
 
 <meta property="og:type" content="profile">
 <meta property="og:title" content="Scott Chanatry">
-<meta property="og:description" content="Child psychiatrist. Stanford alum. Parent. Vibecoder.">
+<meta property="og:description" content="Stanford alum. Parent. Author. Vibecoder.">
 <meta property="og:url" content="https://scottchanatry.com/">
 <meta property="og:site_name" content="Scott Chanatry">
 <meta name="twitter:card" content="summary">
@@ -19,6 +19,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=Shantell+Sans:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/site.css">
 
 <!-- Entity data for search engines. -->
 <script type="application/ld+json">
@@ -32,8 +33,7 @@
       "givenName": "Scott",
       "familyName": "Chanatry",
       "url": "https://scottchanatry.com/",
-      "jobTitle": "Child Psychiatrist",
-      "description": "Child psychiatrist, Stanford alum, parent, and vibecoder.",
+      "description": "Stanford alum, parent, author, and vibecoder.",
       "alumniOf": [
         {
           "@type": "CollegeOrUniversity",
@@ -46,10 +46,12 @@
           "url": "https://med.nyu.edu/"
         }
       ],
-      "knowsAbout": ["Child psychiatry", "Mental health", "Software"],
+      "knowsAbout": ["Parenting", "Writing", "Software"],
       "sameAs": [
-        "https://scholar.google.com/citations?user=lvxDxZMAAAAJ",
+        "https://www.linkedin.com/in/chanatry/",
+        "https://scottchanatry.medium.com",
         "https://github.com/scottchanatry",
+        "https://scholar.google.com/citations?user=lvxDxZMAAAAJ",
         "https://www.semanticscholar.org/author/Scott-Chanatry/52191114"
       ]
     },
@@ -58,7 +60,7 @@
       "@id": "https://scottchanatry.com/#profile",
       "url": "https://scottchanatry.com/",
       "name": "Scott Chanatry",
-      "dateModified": "2026-11-03",
+      "dateModified": "2026-11-10",
       "mainEntity": { "@id": "https://scottchanatry.com/#scott" },
       "isPartOf": { "@id": "https://scottchanatry.com/#site" }
     },
@@ -72,300 +74,16 @@
   ]
 }
 </script>
-
-<style>
-  :root {
-    --paper: #FCFCF9;
-    --ink: #1E2430;
-    --graphite: #5A6372;
-    --crayon-blue: #2C55D4;
-    --crayon-red: #E4572E;
-    --crayon-yellow: #F5B31E;
-    --wash: #F1F4FE;
-    --display: "Bricolage Grotesque", system-ui, sans-serif;
-    --mono: "IBM Plex Mono", ui-monospace, monospace;
-    --hand: "Shantell Sans", cursive;
-    --body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-    --col: 46rem;
-    --pad: clamp(1.25rem, 5vw, 2rem);
-  }
-
-  * { box-sizing: border-box; }
-
-  html { scroll-behavior: smooth; }
-
-  body {
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: var(--body);
-    font-size: 1.0625rem;
-    line-height: 1.65;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  ::selection { background: var(--crayon-blue); color: #fff; }
-
-  a { color: inherit; }
-
-  :focus-visible {
-    outline: 3px solid var(--crayon-blue);
-    outline-offset: 3px;
-    border-radius: 2px;
-  }
-
-  .skip {
-    position: absolute;
-    left: -999px;
-    top: 0;
-    background: var(--crayon-blue);
-    color: #fff;
-    padding: .5rem 1rem;
-    z-index: 100;
-  }
-  .skip:focus { left: 0; }
-
-  .wrap {
-    max-width: var(--col);
-    margin-inline: auto;
-    padding-inline: var(--pad);
-  }
-
-  /* ---------- hero ---------- */
-
-  .hero { padding-block: clamp(4.5rem, 14vh, 8.5rem) clamp(2.5rem, 6vh, 4rem); }
-
-  .eyebrow {
-    font-family: var(--mono);
-    font-size: .75rem;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--graphite);
-    margin: 0 0 1.5rem;
-  }
-
-  h1 {
-    font-family: var(--display);
-    font-weight: 800;
-    font-size: clamp(2.9rem, 10vw, 6.25rem);
-    line-height: .97;
-    letter-spacing: -0.02em;
-    margin: 0 0 1.4rem;
-  }
-
-  .hello {
-    display: block;
-    font-weight: 500;
-    font-size: clamp(1.1rem, 3vw, 1.5rem);
-    letter-spacing: 0;
-    color: var(--graphite);
-    margin-bottom: .5rem;
-  }
-
-  .name {
-    position: relative;
-    display: inline-block;
-  }
-
-  .underline {
-    position: absolute;
-    left: -1%;
-    bottom: -0.28em;
-    width: 102%;
-    height: .32em;
-    pointer-events: none;
-  }
-
-  .roles {
-    font-family: var(--display);
-    font-weight: 500;
-    font-size: clamp(1.15rem, 3.4vw, 1.5rem);
-    color: var(--ink);
-    margin: 0;
-    max-width: 42ch;
-  }
-
-  .vibe { position: relative; white-space: nowrap; }
-
-  .note {
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    transform: rotate(-4deg) translate(-30%, .35rem);
-    font-family: var(--hand);
-    font-size: .95rem;
-    color: var(--crayon-blue);
-    white-space: nowrap;
-  }
-
-  /* ---------- sections ---------- */
-
-  .section { padding-block: clamp(2.25rem, 6vh, 3.5rem); }
-
-  .label {
-    font-family: var(--mono);
-    font-weight: 500;
-    font-size: .75rem;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--graphite);
-    margin: 0 0 1.25rem;
-  }
-
-  .label::before {
-    content: "";
-    display: inline-block;
-    width: 1.1rem;
-    height: .28rem;
-    margin-right: .6rem;
-    vertical-align: .12em;
-    background: var(--crayon-blue);
-    border-radius: 999px;
-    transform: rotate(-2deg);
-  }
-
-  .section p { margin: 0 0 1.1rem; max-width: 60ch; }
-  .section p:last-child { margin-bottom: 0; }
-
-  /* ---------- elsewhere list ---------- */
-
-  .places { list-style: none; margin: 0; padding: 0; }
-
-  .place a {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: .35rem 1rem;
-    padding: .9rem .75rem;
-    margin-inline: -.75rem;
-    border-radius: .5rem;
-    text-decoration: none;
-    transition: background .15s ease;
-  }
-
-  .place a:hover { background: var(--wash); }
-
-  .place-name {
-    font-family: var(--mono);
-    font-weight: 500;
-    font-size: .95rem;
-    color: var(--ink);
-    border-bottom: 3px solid transparent;
-  }
-
-  .place a:hover .place-name { border-bottom-color: var(--crayon-blue); }
-
-  .place-desc { color: var(--graphite); font-size: .95rem; }
-
-  .place-arrow { margin-left: auto; color: var(--crayon-blue); font-family: var(--mono); }
-
-  /* ---------- footer ---------- */
-
-  footer {
-    padding-block: clamp(2.5rem, 7vh, 4rem);
-    color: var(--graphite);
-    font-size: .9rem;
-  }
-
-  footer p { margin: 0 0 .5rem; max-width: 60ch; }
-
-  footer a { color: var(--ink); text-decoration-color: var(--crayon-blue); text-decoration-thickness: 2px; }
-  .section p a { text-decoration-color: var(--crayon-blue); text-decoration-thickness: 2px; text-underline-offset: 2px; }
-
-  /* ---------- crayon mode ---------- */
-
-  #crayonToggle {
-    position: fixed;
-    right: clamp(.9rem, 3vw, 1.5rem);
-    bottom: clamp(.9rem, 3vw, 1.5rem);
-    z-index: 70;
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-    font-family: var(--mono);
-    font-size: .85rem;
-    padding: .6rem .95rem;
-    border: 2px solid var(--ink);
-    border-radius: 999px;
-    background: var(--paper);
-    color: var(--ink);
-    cursor: pointer;
-    box-shadow: 0 2px 0 var(--ink);
-  }
-
-  #crayonToggle:hover { background: var(--wash); }
-
-  #crayonToggle[aria-pressed="true"] {
-    background: var(--crayon-blue);
-    border-color: var(--crayon-blue);
-    color: #fff;
-    box-shadow: 0 2px 0 var(--ink);
-  }
-
-  #scribble {
-    position: fixed;
-    inset: 0;
-    z-index: 60;
-    touch-action: none;
-    cursor: crosshair;
-  }
-
-  #scribble[hidden] { display: none; }
-
-  #crayonKit {
-    position: fixed;
-    left: 50%;
-    bottom: clamp(.9rem, 3vw, 1.5rem);
-    transform: translateX(-50%);
-    z-index: 70;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-    padding: .5rem .65rem;
-    background: var(--paper);
-    border: 2px solid var(--ink);
-    border-radius: 999px;
-    box-shadow: 0 2px 0 var(--ink);
-  }
-
-  #crayonKit[hidden] { display: none; }
-
-  .swatch {
-    width: 1.7rem;
-    height: 1.7rem;
-    border-radius: 50%;
-    border: 2px solid transparent;
-    cursor: pointer;
-    padding: 0;
-  }
-
-  .swatch[aria-pressed="true"] { border-color: var(--ink); }
-
-  .swatch-blue { background: var(--crayon-blue); }
-  .swatch-red { background: var(--crayon-red); }
-  .swatch-yellow { background: var(--crayon-yellow); }
-
-  .kit-btn {
-    font-family: var(--mono);
-    font-size: .8rem;
-    background: none;
-    border: none;
-    color: var(--ink);
-    cursor: pointer;
-    padding: .35rem .5rem;
-    border-radius: .4rem;
-  }
-
-  .kit-btn:hover { background: var(--wash); }
-
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-  }
-</style>
 </head>
 <body>
 
 <a class="skip" href="#main">Skip to content</a>
+
+<nav class="tabs wrap" aria-label="Site">
+  <a href="/" aria-current="page">Home</a>
+  <a href="/blog/">Blog</a>
+  <a href="/books/">Books</a>
+</nav>
 
 <header class="hero wrap">
   <p class="eyebrow">scottchanatry.com</p>
@@ -373,8 +91,8 @@
     <span class="hello">Hi, I&rsquo;m</span>
     <span class="name">Scott Chanatry<canvas class="underline" id="underline" aria-hidden="true"></canvas></span>
   </h1>
-  <p class="roles">Trained at Stanford, NYU School of Medicine, and psychiatry
-    residency. Currently on the longest rotation there is:
+  <p class="roles">Trained at Stanford and NYU School of Medicine. Currently
+    on the longest rotation there is:
     <span class="vibe">parenthood.<span class="note" aria-hidden="true">matched for life &#8599;</span></span>
   </p>
 </header>
@@ -382,12 +100,13 @@
 <main id="main">
   <section class="section wrap" aria-labelledby="about-h">
     <h2 class="label" id="about-h">About</h2>
-    <p>I&rsquo;m Scott Chanatry, a child psychiatrist. Much of my working life
-       was spent doing the slowest, most valuable thing there is: listening to
-       kids, and to the families around them, until the picture makes sense.
-       For now I&rsquo;ve stepped away from clinical practice to learn what
-       training couldn&rsquo;t teach me &mdash; by being home with my own
-       children while they&rsquo;re young.</p>
+    <p>I&rsquo;m Scott Chanatry. Much of my working life was spent doing the
+       slowest, most valuable thing there is: listening to kids, and to the
+       families around them, until the picture makes sense. For now I&rsquo;ve
+       stepped away to learn what training couldn&rsquo;t teach me &mdash; by
+       being home with my own children while they&rsquo;re young.</p>
+    <p>I write about it, too: there are <a href="/books/">books</a>, and a
+       <a href="/blog/">parenting blog</a> on the way.</p>
     <p>Whatever&rsquo;s left over goes to building small software for the fun
        of it &mdash; a habit that started at Stanford and never really
        stopped.</p>
@@ -397,9 +116,9 @@
     <h2 class="label" id="elsewhere-h">Elsewhere</h2>
     <ul class="places">
       <li class="place">
-        <a rel="me" href="https://scholar.google.com/citations?user=lvxDxZMAAAAJ">
-          <span class="place-name">Google Scholar</span>
-          <span class="place-desc">research from an earlier chapter</span>
+        <a rel="me" href="https://www.linkedin.com/in/chanatry/">
+          <span class="place-name">LinkedIn</span>
+          <span class="place-desc">the professional version</span>
           <span class="place-arrow" aria-hidden="true">&#8599;</span>
         </a>
       </li>
@@ -407,6 +126,13 @@
         <a rel="me" href="https://github.com/scottchanatry">
           <span class="place-name">GitHub</span>
           <span class="place-desc">apps, experiments, this site</span>
+          <span class="place-arrow" aria-hidden="true">&#8599;</span>
+        </a>
+      </li>
+      <li class="place">
+        <a rel="me" href="https://scholar.google.com/citations?user=lvxDxZMAAAAJ">
+          <span class="place-name">Google Scholar</span>
+          <span class="place-desc">research from an earlier chapter</span>
           <span class="place-arrow" aria-hidden="true">&#8599;</span>
         </a>
       </li>
@@ -450,162 +176,6 @@
   <button class="kit-btn" id="done">Done</button>
 </div>
 
-<script>
-/* ============================================================
-   The crayon engine.
-   One idea, used twice: a stroke is a list of points, and we
-   render it in two slightly-jittered passes with soft alpha,
-   which is enough to read as wax on paper.
-   ============================================================ */
-
-const reduceMotion = matchMedia("(prefers-reduced-motion: reduce)").matches;
-const jitter = amp => (Math.random() - 0.5) * amp;
-
-function crayonPath(ctx, pts, color, width, amp) {
-  ctx.lineCap = "round";
-  ctx.lineJoin = "round";
-  ctx.strokeStyle = color;
-  for (const [alpha, w] of [[0.6, width], [0.32, width * 0.65]]) {
-    ctx.globalAlpha = alpha;
-    ctx.lineWidth = w;
-    ctx.beginPath();
-    ctx.moveTo(pts[0].x + jitter(amp), pts[0].y + jitter(amp));
-    for (let i = 1; i < pts.length - 1; i++) {
-      const mx = (pts[i].x + pts[i + 1].x) / 2 + jitter(amp);
-      const my = (pts[i].y + pts[i + 1].y) / 2 + jitter(amp);
-      ctx.quadraticCurveTo(pts[i].x + jitter(amp), pts[i].y + jitter(amp), mx, my);
-    }
-    const last = pts[pts.length - 1];
-    ctx.lineTo(last.x + jitter(amp * 0.5), last.y + jitter(amp * 0.5));
-    ctx.stroke();
-  }
-  ctx.globalAlpha = 1;
-}
-
-function fitCanvas(canvas) {
-  const dpr = Math.min(window.devicePixelRatio || 1, 2);
-  const r = canvas.getBoundingClientRect();
-  canvas.width = Math.max(1, Math.round(r.width * dpr));
-  canvas.height = Math.max(1, Math.round(r.height * dpr));
-  const ctx = canvas.getContext("2d");
-  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-  return ctx;
-}
-
-/* ---------- 1. The underline draws itself ---------- */
-
-function drawUnderline() {
-  const canvas = document.getElementById("underline");
-  const ctx = fitCanvas(canvas);
-  const w = canvas.getBoundingClientRect().width;
-  const h = canvas.getBoundingClientRect().height;
-  const pts = [];
-  const n = 26;
-  for (let i = 0; i <= n; i++) {
-    const t = i / n;
-    pts.push({
-      x: t * w,
-      y: h * 0.55 + Math.sin(t * Math.PI * 2.2) * h * 0.18 + jitter(h * 0.14)
-    });
-  }
-  const width = Math.max(3.5, h * 0.42);
-
-  if (reduceMotion) {
-    crayonPath(ctx, pts, "#2C55D4", width, 1.1);
-    return;
-  }
-  const t0 = performance.now();
-  const dur = 650;
-  (function frame(now) {
-    const p = Math.min(1, (now - t0) / dur);
-    const upto = Math.max(3, Math.floor(pts.length * p));
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    crayonPath(ctx, pts.slice(0, upto), "#2C55D4", width, 1.1);
-    if (p < 1) requestAnimationFrame(frame);
-  })(t0);
-}
-
-drawUnderline();
-let resizeTimer = null;
-addEventListener("resize", () => {
-  if (!resizeTimer) resizeTimer = setTimeout(() => {
-    resizeTimer = null;
-    drawUnderline();
-    if (!scribble.hidden) redrawStrokes();
-  }, 150);
-});
-
-/* ---------- 2. The crayon you can hold ---------- */
-
-const toggle = document.getElementById("crayonToggle");
-const kit = document.getElementById("crayonKit");
-const scribble = document.getElementById("scribble");
-const strokes = [];            // every drawing survives resize + Done/reopen
-let sctx = null;
-let color = "#2C55D4";
-let current = null;
-
-function redrawStrokes() {
-  sctx = fitCanvas(scribble);
-  for (const s of strokes) {
-    if (s.pts.length > 1) crayonPath(sctx, s.pts, s.color, 5, 1.4);
-  }
-}
-
-function setCrayon(on) {
-  toggle.setAttribute("aria-pressed", String(on));
-  toggle.hidden = on;                    // Done / Esc close crayon mode
-  scribble.hidden = !on;
-  kit.hidden = !on;
-  if (on) {
-    redrawStrokes();
-    document.getElementById("done").focus();
-  } else {
-    toggle.focus();
-  }
-}
-
-toggle.addEventListener("click", () =>
-  setCrayon(toggle.getAttribute("aria-pressed") !== "true"));
-
-document.getElementById("done").addEventListener("click", () => setCrayon(false));
-
-document.getElementById("wipe").addEventListener("click", () => {
-  strokes.length = 0;
-  sctx.clearRect(0, 0, scribble.width, scribble.height);
-});
-
-addEventListener("keydown", e => {
-  if (e.key === "Escape" && !scribble.hidden) setCrayon(false);
-});
-
-for (const sw of kit.querySelectorAll(".swatch")) {
-  sw.addEventListener("click", () => {
-    color = sw.dataset.color;
-    kit.querySelectorAll(".swatch").forEach(b =>
-      b.setAttribute("aria-pressed", String(b === sw)));
-  });
-}
-
-scribble.addEventListener("pointerdown", e => {
-  scribble.setPointerCapture(e.pointerId);
-  current = { color, pts: [{ x: e.clientX, y: e.clientY }] };
-  strokes.push(current);
-});
-
-scribble.addEventListener("pointermove", e => {
-  if (!current) return;
-  const last = current.pts[current.pts.length - 1];
-  const dx = e.clientX - last.x, dy = e.clientY - last.y;
-  if (dx * dx + dy * dy < 9) return;      // thin out points
-  current.pts.push({ x: e.clientX, y: e.clientY });
-  const n = current.pts.length;
-  crayonPath(sctx, current.pts.slice(n - 2), current.color, 5, 1.4);
-});
-
-const endStroke = () => { current = null; };
-scribble.addEventListener("pointerup", endStroke);
-scribble.addEventListener("pointercancel", endStroke);
-</script>
+<script src="/crayon.js"></script>
 </body>
 </html>
