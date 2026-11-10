@@ -8,11 +8,15 @@ No frameworks, no build step, no trackers.
 
 | File | Purpose |
 |---|---|
-| `index.html` | The whole site: markup, styles, crayon engine, Person schema (JSON-LD) |
+| `index.html` | Home page: bio, links, Person + ProfilePage schema (JSON-LD) |
+| `blog/index.html` | Blog tab (parenting blog coming soon; links to Medium) |
+| `books/index.html` | Books tab (links to the books on Amazon, Book schema) |
+| `site.css` | Shared styles for every page, including the tabs |
+| `crayon.js` | The crayon engine and self-drawing underline, shared by every page |
 | `404.html` | Not-found page (GitHub Pages picks it up automatically) |
 | `CNAME` | Kept for a possible future GitHub Pages setup |
 | `robots.txt` | Allows crawling, points to the sitemap |
-| `sitemap.xml` | One-URL sitemap for Search Console |
+| `sitemap.xml` | Sitemap (home, blog, books) for Search Console |
 
 ## Hosting
 
