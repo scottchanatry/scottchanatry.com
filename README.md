@@ -13,6 +13,7 @@ No frameworks, no build step, no trackers.
 | `books/index.html` | Books tab (links to the books on Amazon, Book schema) |
 | `site.css` | Shared styles for every page, including the tabs |
 | `crayon.js` | The crayon engine and self-drawing underline, shared by every page |
+| `contact.js` | Contact form on the home page (Web3Forms, or opens the visitor's email app until a key is set) |
 | `404.html` | Not-found page (GitHub Pages picks it up automatically) |
 | `CNAME` | Kept for a possible future GitHub Pages setup |
 | `robots.txt` | Allows crawling, points to the sitemap |
