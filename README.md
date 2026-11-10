@@ -26,6 +26,14 @@ publishes automatically. Preview locally with `python3 -m http.server` in
 this folder. The `CNAME` file is kept in case hosting ever moves to
 GitHub Pages.
 
+## Caching
+
+Porkbun tells browsers to keep files for 30 days, so pages link to
+`site.css`, `crayon.js` and `contact.js` with a `?v=` tag. After changing
+one of those files, update its tag in every page so visitors get the new
+copy (any new value works; the current ones are the first 8 characters of
+each file's SHA-1).
+
 ## Make Google find it (the part that actually moves rankings)
 
 1. **Google Search Console** → add property `scottchanatry.com` (Domain type)
