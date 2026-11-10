@@ -324,46 +324,105 @@ footer a { color: var(--ink); text-decoration-color: var(--crayon-blue); text-de
   transform: rotate(-3deg);
 }
 
-/* ---------- books ---------- */
+/* ---------- books: home shelf ---------- */
 
-.books {
+.shelf {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(clamp(8.5rem, 38vw, 12rem), 1fr));
-  gap: 2rem clamp(1rem, 4vw, 1.75rem);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
 }
 
-.book a {
+.shelf a {
   display: flex;
   flex-direction: column;
-  gap: .3rem;
+  gap: .6rem;
+  width: clamp(7.5rem, 30vw, 9rem);
   text-decoration: none;
 }
 
-.book img {
+.shelf img,
+.book-cover img {
+  display: block;
   width: 100%;
   height: auto;
   border-radius: .25rem;
   box-shadow: 0 1px 2px rgba(30, 36, 48, .12), 0 8px 24px rgba(30, 36, 48, .12);
-  margin-bottom: .6rem;
   transition: transform .2s ease;
 }
 
-.book a:hover img { transform: translateY(-3px) rotate(-.6deg); }
+.shelf a:hover img { transform: translateY(-3px) rotate(-.6deg); }
 
-.book-title {
+.shelf-title {
   font-family: var(--display);
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.2;
 }
 
-.book-buy { font-family: var(--mono); font-size: .85rem; color: var(--crayon-blue); }
+.shelf a:hover .shelf-title {
+  text-decoration: underline;
+  text-decoration-color: var(--crayon-blue);
+  text-decoration-thickness: 3px;
+}
 
-.book a:hover .book-title { text-decoration: underline; text-decoration-color: var(--crayon-blue); text-decoration-thickness: 3px; }
+/* ---------- books: books tab ---------- */
+
+.book-detail {
+  display: grid;
+  grid-template-columns: 11rem 1fr;
+  gap: 2rem;
+  align-items: start;
+  padding-block: 1.5rem 2.5rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.book-detail + .book-detail { border-top: 1px solid #E3E6EC; padding-top: 2.5rem; }
+
+.book-series {
+  font-family: var(--mono);
+  font-size: .75rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--graphite);
+  margin: 0 0 .4rem;
+}
+
+.book-name {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  line-height: 1.1;
+  margin: 0 0 1rem;
+}
+
+.section .book-desc p { margin: 0 0 .9rem; }
+
+.book-questions { font-style: italic; color: var(--graphite); }
+
+.book-amazon {
+  display: inline-block;
+  margin-top: .5rem;
+  font-family: var(--mono);
+  font-size: .9rem;
+  color: var(--crayon-blue);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.book-detail:target .book-name {
+  text-decoration: underline;
+  text-decoration-color: var(--crayon-yellow);
+  text-decoration-thickness: 5px;
+}
+
+@media (max-width: 34rem) {
+  .book-detail { grid-template-columns: 1fr; gap: 1.25rem; }
+  .book-cover { width: 9rem; }
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .book a:hover img { transform: none; }
+  .shelf a:hover img { transform: none; }
 }
