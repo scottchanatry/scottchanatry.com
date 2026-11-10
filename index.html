@@ -83,6 +83,7 @@
   <a href="/" aria-current="page">Home</a>
   <a href="/blog/">Blog</a>
   <a href="/books/">Books</a>
+  <a href="/#contact">Contact</a>
 </nav>
 
 <header class="hero wrap">
@@ -175,6 +176,33 @@
        corner is real, and the underline drew itself when you arrived.
        <a href="https://github.com/scottchanatry/scottchanatry.com">View source</a>; it&rsquo;s all there.</p>
   </section>
+
+  <section class="section wrap" id="contact" aria-labelledby="contact-h">
+    <h2 class="label" id="contact-h">Contact</h2>
+    <p class="contact-email"><a href="mailto:hello@scottchanatry.com">hello@scottchanatry.com</a></p>
+    <p>Or leave a note here. It lands in the same inbox.</p>
+
+    <form class="contact-form" id="contactForm"
+          action="mailto:hello@scottchanatry.com" method="post" enctype="text/plain"
+          data-access-key="">
+      <div class="row">
+        <label>Name
+          <input type="text" name="name" autocomplete="name" required maxlength="120">
+        </label>
+        <label>Email
+          <input type="email" name="email" autocomplete="email" required maxlength="200">
+        </label>
+      </div>
+      <label>Message
+        <textarea name="message" required maxlength="5000"></textarea>
+      </label>
+      <label class="hp" aria-hidden="true">Leave this empty
+        <input type="checkbox" name="botcheck" tabindex="-1">
+      </label>
+      <button type="submit">Send</button>
+      <p class="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
 </main>
 
 <footer class="wrap">
@@ -198,5 +226,6 @@
 </div>
 
 <script src="/crayon.js"></script>
+<script src="/contact.js"></script>
 </body>
 </html>
