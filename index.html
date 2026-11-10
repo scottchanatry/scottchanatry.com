@@ -183,8 +183,10 @@
     <p>Or leave a note here. It lands in the same inbox.</p>
 
     <form class="contact-form" id="contactForm"
-          action="mailto:hello@scottchanatry.com" method="post" enctype="text/plain"
-          data-access-key="">
+          action="https://api.web3forms.com/submit" method="POST"
+          data-access-key="8f75b784-9788-4c09-8fd4-d29dbb5a5ecc">
+      <input type="hidden" name="access_key" value="8f75b784-9788-4c09-8fd4-d29dbb5a5ecc">
+      <input type="hidden" name="subject" value="New note via scottchanatry.com">
       <div class="row">
         <label>Name
           <input type="text" name="name" autocomplete="name" required maxlength="120">
