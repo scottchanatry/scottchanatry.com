@@ -9,7 +9,8 @@ No frameworks, no build step, no trackers.
 | File | Purpose |
 |---|---|
 | `index.html` | Home page: bio, links, Person + ProfilePage schema (JSON-LD) |
-| `blog/index.html` | Blog tab (parenting blog coming soon; links to Medium) |
+| `blog/index.html` | Blog tab: list of posts, links to Medium |
+| `blog/<slug>/index.html` | One page per blog post (first: `behold-your-mother`) |
 | `books/index.html` | Books tab (links to the books on Amazon, Book schema) |
 | `site.css` | Shared styles for every page, including the tabs |
 | `crayon.js` | The crayon engine and self-drawing underline, shared by every page |
