@@ -598,3 +598,17 @@ footer a { color: var(--ink); text-decoration-color: var(--crayon-blue); text-de
 @media (max-width: 34rem) {
   .book-links { grid-column: 1 / -1; }
 }
+
+/* ---------- footer social icons ---------- */
+
+.social { list-style: none; display: flex; flex-wrap: wrap; gap: .35rem; margin: 0 0 1.25rem -.75rem; padding: 0; }
+.social a {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  color: var(--graphite);
+}
+.social a:hover, .social a:focus-visible { color: var(--crayon-blue); background: var(--wash); }
+.social svg { fill: currentColor; }
