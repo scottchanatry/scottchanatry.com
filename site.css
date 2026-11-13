@@ -122,6 +122,13 @@ h1 {
   white-space: nowrap;
 }
 
+/* Narrow phones: tuck the note under the line instead of off the edge. */
+@media (max-width: 24rem) {
+  .roles { position: relative; }
+  .vibe { position: static; }
+  .note { left: 0; transform: rotate(-4deg) translate(0, .35rem); }
+}
+
 /* ---------- sections ---------- */
 
 .section { padding-block: clamp(2.25rem, 6vh, 3.5rem); }
@@ -613,3 +620,27 @@ footer a { color: var(--ink); text-decoration-color: var(--crayon-blue); text-de
 }
 .social a:hover, .social a:focus-visible { color: var(--crayon-blue); background: var(--wash); }
 .social svg { fill: currentColor; }
+
+/* ---------- research ---------- */
+
+.pubs { list-style: none; margin: 0; padding: 0; }
+
+.pubs li { padding: .9rem 0; border-bottom: 1px solid #E3E6EC; max-width: 60ch; }
+.pubs li:last-child { border-bottom: 0; }
+
+.pub-title {
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  line-height: 1.25;
+  text-decoration-color: var(--crayon-blue);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+.pub-meta { display: block; margin-top: .3rem; font-size: .92rem; color: var(--graphite); }
+
+.giving {
+  border-left: 4px solid var(--crayon-red);
+  padding-left: clamp(1rem, 4vw, 1.5rem);
+}
