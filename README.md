@@ -35,6 +35,12 @@ one of those files, update its tag in every page so visitors get the new
 copy (any new value works; the current ones are the first 8 characters of
 each file's SHA-1).
 
+## IndexNow (Bing)
+
+`b2039a131c9b01c827f7b9ebbe949a81.txt` is the IndexNow key file. After publishing a change, tell Bing
+which pages changed by POSTing to `https://api.indexnow.org/indexnow` with
+`host`, `key`, `keyLocation` and `urlList`. Keep the file at the site root.
+
 ## Make Google find it (the part that actually moves rankings)
 
 1. **Google Search Console** → add property `scottchanatry.com` (Domain type)
