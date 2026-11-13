@@ -290,6 +290,7 @@ footer a { color: var(--ink); text-decoration-color: var(--crayon-blue); text-de
 
 .tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: .25rem;
   padding-top: clamp(1.25rem, 4vh, 2rem);
   font-family: var(--mono);
