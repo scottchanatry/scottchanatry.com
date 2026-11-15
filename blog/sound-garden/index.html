@@ -12,8 +12,10 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sound Garden: a generative music app for iOS and Android">
 <meta property="og:description" content="Tap to plant seeds that grow into flowers, ripple and chime. Open source, built with React Native and Expo.">
-<meta property="og:image" content="https://scottchanatry.com/blog/sound-garden/sound-garden.jpg">
-<meta property="og:image:alt" content="Sound Garden on a phone: nine small plants drawn in green ink on cream paper, with fine ripples spreading between them">
+<meta property="og:image" content="https://scottchanatry.com/blog/sound-garden/share.jpg?v=e2d8ef3b">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sound Garden wordmark in deep green with the line 'Plant a sound. Let the garden play.' beside a phone showing drawn flowers and fine green ripples on a cream screen">
 <meta property="og:url" content="https://scottchanatry.com/blog/sound-garden/">
 <meta property="og:site_name" content="Scott Chanatry">
 <meta property="article:published_time" content="2026-11-15">
@@ -37,6 +39,7 @@
   .post-intro img { display: block; width: 100%; height: auto; border-radius: .25rem; box-shadow: 0 1px 2px rgba(30,36,48,.12), 0 8px 24px rgba(30,36,48,.12); }
   .post-intro p { margin: 0; }
   .post-shot { margin: 0 0 2rem; max-width: 30rem; }
+  .post-shot picture { display: block; }
   .post-shot img { display: block; width: 100%; height: auto; border-radius: .6rem; box-shadow: 0 1px 2px rgba(30,36,48,.08), 0 10px 28px rgba(30,36,48,.12); }
   .post-shot figcaption { margin-top: .6rem; font-family: var(--mono); font-size: .8rem; color: var(--graphite); }
   .post .btn { margin: .5rem 0 1.5rem; }
@@ -58,7 +61,7 @@
       "url": "https://scottchanatry.com/blog/sound-garden/",
       "datePublished": "2026-11-15",
       "dateModified": "2026-11-15",
-      "image": "https://scottchanatry.com/blog/sound-garden/sound-garden.jpg",
+      "image": ["https://scottchanatry.com/blog/sound-garden/share.jpg?v=e2d8ef3b", "https://scottchanatry.com/blog/sound-garden/sound-garden.jpg?v=7fab2c1b"],
       "keywords": "Sound Garden, generative music, iOS app, Android app, React Native, Expo, open source",
       "author": { "@id": "https://scottchanatry.com/#scott" },
       "about": { "@id": "https://scottchanatry.com/blog/sound-garden/#app" },
@@ -105,8 +108,11 @@
       rings like a bell, and the garden keeps playing by itself.</p>
 
     <figure class="post-shot">
-      <img src="/blog/sound-garden/sound-garden.jpg?v=2e8394bc" width="1080" height="1350"
-           alt="Sound Garden on a phone: nine small plants drawn in green ink on cream paper, from clover at the bottom to daffodils at the top, with fine ripples spreading between them">
+      <picture>
+        <source srcset="/blog/sound-garden/sound-garden.webp?v=4a4ab79b" type="image/webp" media="(prefers-reduced-motion: no-preference)">
+        <img src="/blog/sound-garden/sound-garden.jpg?v=7fab2c1b" width="1080" height="1350"
+             alt="Sound Garden on a phone beside a botanical caption: ten plants drawn from above, from a leafy seedling to a daffodil, ring with fine green ripples as they are planted, rest and wake again">
+      </picture>
       <figcaption>Leaves are low notes. Flowers are high notes.</figcaption>
     </figure>
 
