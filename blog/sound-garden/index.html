@@ -5,17 +5,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>Sound Garden, a generative music app — Scott Chanatry</title>
-<meta name="description" content="Sound Garden is a new open-source app for iOS and Android. Tap to plant dots that ripple and chime, then let the garden play by itself.">
+<meta name="description" content="Sound Garden is a new open-source app for iOS and Android. Tap to plant seeds that grow into flowers, ripple and chime, then let the garden play by itself.">
 <link rel="canonical" href="https://scottchanatry.com/blog/sound-garden/">
 <meta name="robots" content="index, follow">
 
 <meta property="og:type" content="article">
 <meta property="og:title" content="Sound Garden: a generative music app for iOS and Android">
-<meta property="og:description" content="Tap to plant dots that ripple and chime. Open source, built with React Native and Expo.">
-<meta property="og:image" content="https://scottchanatry.com/blog/sound-garden/share.jpg">
+<meta property="og:description" content="Tap to plant seeds that grow into flowers, ripple and chime. Open source, built with React Native and Expo.">
+<meta property="og:image" content="https://scottchanatry.com/blog/sound-garden/sound-garden.jpg">
+<meta property="og:image:alt" content="Sound Garden on a phone: nine small plants drawn in green ink on cream paper, with fine ripples spreading between them">
 <meta property="og:url" content="https://scottchanatry.com/blog/sound-garden/">
 <meta property="og:site_name" content="Scott Chanatry">
 <meta property="article:published_time" content="2026-11-15">
+<meta property="article:modified_time" content="2026-11-15">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,8 +36,9 @@
   .post-intro { display: grid; grid-template-columns: clamp(5.5rem, 18vw, 7.5rem) 1fr; gap: 1.25rem; align-items: center; margin-bottom: 1.5rem; }
   .post-intro img { display: block; width: 100%; height: auto; border-radius: .25rem; box-shadow: 0 1px 2px rgba(30,36,48,.12), 0 8px 24px rgba(30,36,48,.12); }
   .post-intro p { margin: 0; }
-  .post-shot { margin: 0 0 2rem; }
-  .post-shot img { display: block; width: min(100%, 17rem); height: auto; border-radius: 1.4rem; box-shadow: 0 1px 2px rgba(30,36,48,.12), 0 12px 32px rgba(30,36,48,.22); }
+  .post-shot { margin: 0 0 2rem; max-width: 30rem; }
+  .post-shot img { display: block; width: 100%; height: auto; border-radius: .6rem; box-shadow: 0 1px 2px rgba(30,36,48,.08), 0 10px 28px rgba(30,36,48,.12); }
+  .post-shot figcaption { margin-top: .6rem; font-family: var(--mono); font-size: .8rem; color: var(--graphite); }
   .post .btn { margin: .5rem 0 1.5rem; }
   .post .chapters { list-style: none; padding: 0; }
   .post .chapters li { margin-bottom: .6rem; }
@@ -51,10 +54,11 @@
       "@type": "BlogPosting",
       "@id": "https://scottchanatry.com/blog/sound-garden/#post",
       "headline": "Sound Garden: a generative music app for iOS and Android",
-      "description": "Sound Garden is a new open-source app for iOS and Android. Tap to plant dots that ripple and chime, then let the garden play by itself.",
+      "description": "Sound Garden is a new open-source app for iOS and Android. Tap to plant seeds that grow into flowers, ripple and chime, then let the garden play by itself.",
       "url": "https://scottchanatry.com/blog/sound-garden/",
       "datePublished": "2026-11-15",
-      "image": "https://scottchanatry.com/blog/sound-garden/share.jpg",
+      "dateModified": "2026-11-15",
+      "image": "https://scottchanatry.com/blog/sound-garden/sound-garden.jpg",
       "keywords": "Sound Garden, generative music, iOS app, Android app, React Native, Expo, open source",
       "author": { "@id": "https://scottchanatry.com/#scott" },
       "about": { "@id": "https://scottchanatry.com/blog/sound-garden/#app" },
@@ -64,7 +68,7 @@
       "@type": "SoftwareSourceCode",
       "@id": "https://scottchanatry.com/blog/sound-garden/#app",
       "name": "Sound Garden",
-      "description": "A generative music app for iOS and Android. Tap to plant dots that ripple and chime.",
+      "description": "A generative music app for iOS and Android. Tap to plant seeds that grow into flowers, ripple and chime.",
       "codeRepository": "https://github.com/scottchanatry/sound-garden",
       "programmingLanguage": "JavaScript",
       "runtimePlatform": "React Native (Expo)",
@@ -97,37 +101,46 @@
   <article class="section wrap post">
     <p>I have a new app out, and I&rsquo;m excited about this one.
       <strong>Sound Garden</strong> is a small generative music app for iOS
-      and Android. You tap to plant dots, the dots ring like bells, and the
-      garden keeps playing by itself.</p>
+      and Android. You tap to plant seeds, each seed grows into a plant that
+      rings like a bell, and the garden keeps playing by itself.</p>
 
     <figure class="post-shot">
-      <img src="/blog/sound-garden/sound-garden.png" width="390" height="844"
-           alt="Sound Garden on a phone: four glowing dots on a dark blue screen, with ripples spreading from each one">
+      <img src="/blog/sound-garden/sound-garden.jpg?v=2e8394bc" width="1080" height="1350"
+           alt="Sound Garden on a phone: nine small plants drawn in green ink on cream paper, from clover at the bottom to daffodils at the top, with fine ripples spreading between them">
+      <figcaption>Leaves are low notes. Flowers are high notes.</figcaption>
     </figure>
 
     <h2 class="label" id="how-h">How it plays</h2>
     <ul>
-      <li><strong>Tap anywhere</strong> to plant a dot. Up to fourteen fit.</li>
+      <li><strong>Tap anywhere</strong> to plant a seed. Up to fourteen fit.</li>
       <li><strong>Height is pitch.</strong> Higher on the screen is a higher
-        bell. The ten notes are a pentatonic scale, so any combination sounds
-        good together.</li>
-      <li><strong>Left to right is tempo.</strong> Each dot pulses by itself
-        every few seconds, and dots further right pulse more slowly.</li>
+        bell. Low notes come up as seedlings, clover and grass. High notes
+        come up as roses, daisies and daffodils. The ten notes are a
+        pentatonic scale, so any combination sounds good together.</li>
+      <li><strong>Left to right is tempo.</strong> Each plant rings by itself
+        every few seconds, and plants further right ring more slowly.</li>
       <li><strong>Ripples carry sound.</strong> When a ripple reaches another
-        dot, that dot answers with a quieter echo, so the space between dots
-        becomes the rhythm.</li>
-      <li><strong>Tap a dot</strong> to ring it. <strong>Hold a dot</strong>
+        plant, that plant answers with a quieter echo, so the space between
+        plants becomes the rhythm.</li>
+      <li><strong>Tap a plant</strong> to ring it. <strong>Hold a plant</strong>
         to pull it up.</li>
+      <li><strong>Scatter</strong> sows a handful of seeds for you.
+        <strong>Pause</strong> lets the garden rest.</li>
     </ul>
 
-    <p>There is nothing to win and nothing to finish. Plant a few dots, set
+    <p>There is nothing to win and nothing to finish. Plant a few seeds, set
       the phone down, and listen to what they work out between them.</p>
+
+    <h2 class="label" id="look-h">How it looks</h2>
+    <p>The garden is drawn like a page from an old botanical print: cream
+      paper, one green ink, and ten small plants seen from above. I wanted it
+      to feel light and quiet.</p>
 
     <h2 class="label" id="built-h">How it is built</h2>
     <p>Sound Garden is one codebase in React Native with Expo, so the same
-      code runs on iPhone and Android. The bell tones and the app icon
-      are generated by short scripts in the repository, and the whole thing
-      is open source under the MIT license.</p>
+      code runs on iPhone and Android. The plants are drawn in code, the
+      bell tones and the app icon are generated by short scripts in the
+      repository, and the whole thing is open source under the MIT license.</p>
 
     <p><a class="btn" href="https://github.com/scottchanatry/sound-garden">Sound Garden on GitHub <span aria-hidden="true">&#8599;</span></a></p>
 
