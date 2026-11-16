@@ -14,13 +14,14 @@ No frameworks, no build step, no trackers.
 | `research/index.html` | Research tab: profiles, publications, Stanford giving note |
 | `code/index.html` | Code tab: links to the GitHub repositories |
 | `books/index.html` | Books tab (links to the books on Amazon, Book schema) |
+| `cliffword/index.html`, `cliffword/privacy/index.html`, `cliffword/support/index.html` | Cliffword app pages: about, privacy policy, support (generated from the Cliffword repo's `docs/site/build.py`; self-contained styles, no shared CSS or JS) |
 | `site.css` | Shared styles for every page, including the tabs |
 | `crayon.js` | The crayon engine and self-drawing underline, shared by every page |
 | `contact.js` | Contact form on the home page (Web3Forms, or opens the visitor's email app until a key is set) |
 | `404.html` | Not-found page (GitHub Pages picks it up automatically) |
 | `CNAME` | Kept for a possible future GitHub Pages setup |
 | `robots.txt` | Allows crawling, points to the sitemap |
-| `sitemap.xml` | Sitemap (home, blog, books) for Search Console |
+| `sitemap.xml` | Sitemap (home, blog, books, Cliffword) for Search Console |
 
 ## Hosting
 
